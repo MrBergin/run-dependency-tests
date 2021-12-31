@@ -1,0 +1,16 @@
+= Examples
+
+== Architecture Tests
+
+The use-case this example intends to demonstrate is as follows:
+
+You have two modules:
+
+* my-module
+* my-other-module
+
+Both of these modules must contain only classes that reside under your domain, for example this one is dev.mrbergin.
+
+You write ArchUnit tests to enforce this, but don't want to repeat yourself across both modules, so you refactor it out to an arch-tests module.
+
+Using the run-dependency-tests plugin you can now configure the `test` task for my-module and my-other-module with the arch-tests module.

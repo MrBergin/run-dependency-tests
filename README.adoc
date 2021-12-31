@@ -1,0 +1,24 @@
+= Run Dependency Tests
+
+== Introduction
+
+Run Dependency Tests is a gradle plugin that allows you to declare dependencies in a Test task that contain tests you want to run.
+
+Example usage:
+
+[source,kotlin]
+----
+tasks.test {
+    useJUnitPlatform()
+    includeTestsFrom("dev.mrbergin.rdt.examples:arch-tests")
+}
+----
+
+== Why would I want this?
+
+In most cases it may not be desirable to include tests from another library, since your tests are usually tightly coupled to something like your main source set.
+
+However, tests written using a tool such as https://www.archunit.org/[ArchUnit] may be loosely coupled from your projects and also want to be applied to many of them, in this case encapsulating those tests in another library and adding them to your Test task makes sense.
+
+See the xref:examples/README.adoc[examples] section for  further context.
+
