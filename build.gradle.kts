@@ -6,7 +6,8 @@ plugins {
 }
 
 group = "dev.mrbergin"
-version = "0.0.1-SNAPSHOT"
+val releaseVersion: String? by project
+version = releaseVersion ?: "0.0.1-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -24,6 +25,12 @@ kotlin {
     jvmToolchain {
         (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(8))
     }
+}
+
+pluginBundle {
+    website = "https://github.com/MrBergin/run-dependency-test"
+    vcsUrl = "https://github.com/MrBergin/run-dependency-test.git"
+    tags = listOf("testing", "archunit")
 }
 
 gradlePlugin {
