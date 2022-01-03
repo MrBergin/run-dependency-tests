@@ -28,8 +28,8 @@ kotlin {
 }
 
 pluginBundle {
-    website = "https://github.com/MrBergin/run-dependency-test"
-    vcsUrl = "https://github.com/MrBergin/run-dependency-test.git"
+    website = "https://github.com/mrbergin/run-dependency-tests"
+    vcsUrl = "https://github.com/mrbergin/run-dependency-tests.git"
     tags = listOf("testing", "archunit")
 }
 
